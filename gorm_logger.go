@@ -1,4 +1,4 @@
-package gorm_logger
+package gorm_logger_wrapper
 
 import (
 	"context"
