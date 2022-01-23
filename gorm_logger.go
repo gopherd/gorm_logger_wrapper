@@ -25,19 +25,19 @@ func (l *Logger) LogMode(level logger.LogLevel) logger.Interface {
 	return l
 }
 
-func (l *Logger) Info(ctx context.Context, format string, a ...interface{}) {
+func (l *Logger) Info(ctx context.Context, format string, a ...any) {
 	if l.logger.GetLevel() >= log.LevelInfo {
 		l.logger.Print(l.calldepth, log.LevelInfo, fmt.Sprintf(format, a...))
 	}
 }
 
-func (l *Logger) Warn(crx context.Context, format string, a ...interface{}) {
+func (l *Logger) Warn(crx context.Context, format string, a ...any) {
 	if l.logger.GetLevel() >= log.LevelWarn {
 		l.logger.Print(l.calldepth, log.LevelWarn, fmt.Sprintf(format, a...))
 	}
 }
 
-func (l *Logger) Error(ctx context.Context, format string, a ...interface{}) {
+func (l *Logger) Error(ctx context.Context, format string, a ...any) {
 	if l.logger.GetLevel() >= log.LevelError {
 		l.logger.Print(l.calldepth, log.LevelError, fmt.Sprintf(format, a...))
 	}
