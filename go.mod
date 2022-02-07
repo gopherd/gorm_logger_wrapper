@@ -1,6 +1,6 @@
 module github.com/gopherd/gorm_logger_wrapper
 
-go 1.17
+go 1.18
 
 require (
 	github.com/gopherd/log v0.1.5 // indirect
